@@ -15,7 +15,7 @@ namespace MvcMovie.Models
         public DateTime ReleaseDate { get; set; }
 
         
-        [StringLength(30), Required]
+        [StringLength(30), RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage ="This field only accepts alphabetical characters"), Required]
         public string Genre { get; set; }
 
         [Range(1, 100)]
