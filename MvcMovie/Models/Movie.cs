@@ -22,7 +22,7 @@ namespace MvcMovie.Models
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
-        [Required]
+        [Required, DataType("string")]
         public string Rating { get; set; }
     }
 }
